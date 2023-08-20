@@ -12,6 +12,7 @@
 		C62C006B2A921E8900333B32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C006A2A921E8900333B32 /* ViewController.swift */; };
 		C62C00702A921E8A00333B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62C006F2A921E8A00333B32 /* Assets.xcassets */; };
 		C62C00732A921E8A00333B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62C00712A921E8A00333B32 /* LaunchScreen.storyboard */; };
+		C62C007D2A92C1E800333B32 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C62C007C2A92C1E800333B32 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C62C006F2A921E8A00333B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C62C00722A921E8A00333B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C62C00742A921E8A00333B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C62C007C2A92C1E800333B32 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		C62C005A2A921E8900333B32 = {
 			isa = PBXGroup;
 			children = (
+				C62C007C2A92C1E800333B32 /* .gitignore */,
 				C62C00652A921E8900333B32 /* MyWeather */,
 				C62C00642A921E8900333B32 /* Products */,
 			);
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C62C00732A921E8A00333B32 /* LaunchScreen.storyboard in Resources */,
+				C62C007D2A92C1E800333B32 /* .gitignore in Resources */,
 				C62C00702A921E8A00333B32 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

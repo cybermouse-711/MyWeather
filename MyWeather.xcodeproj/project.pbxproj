@@ -13,6 +13,7 @@
 		C62C00702A921E8A00333B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62C006F2A921E8A00333B32 /* Assets.xcassets */; };
 		C62C00732A921E8A00333B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62C00712A921E8A00333B32 /* LaunchScreen.storyboard */; };
 		C62C007D2A92C1E800333B32 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C62C007C2A92C1E800333B32 /* .gitignore */; };
+		C65E9FCE2AF9507500E74BE6 /* DataWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E9FCD2AF9507500E74BE6 /* DataWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C62C00722A921E8A00333B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C62C00742A921E8A00333B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C62C007C2A92C1E800333B32 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C65E9FCD2AF9507500E74BE6 /* DataWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,20 @@
 				C62C00662A921E8900333B32 /* AppDelegate.swift */,
 				C62C00682A921E8900333B32 /* SceneDelegate.swift */,
 				C62C006A2A921E8900333B32 /* ViewController.swift */,
+				C65E9FCF2AF9521E00E74BE6 /* Models */,
 				C62C006F2A921E8A00333B32 /* Assets.xcassets */,
 				C62C00712A921E8A00333B32 /* LaunchScreen.storyboard */,
 				C62C00742A921E8A00333B32 /* Info.plist */,
 			);
 			path = MyWeather;
+			sourceTree = "<group>";
+		};
+		C65E9FCF2AF9521E00E74BE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C65E9FCD2AF9507500E74BE6 /* DataWeather.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				C62C006B2A921E8900333B32 /* ViewController.swift in Sources */,
 				C62C00672A921E8900333B32 /* AppDelegate.swift in Sources */,
+				C65E9FCE2AF9507500E74BE6 /* DataWeather.swift in Sources */,
 				C62C00692A921E8900333B32 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

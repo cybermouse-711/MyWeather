@@ -8,14 +8,28 @@
 import Foundation
 
 struct DataWeather: Decodable {
-    var data: String
-    var degrees: String
-    var city: String
-    //data
+    let info: Info
+    let fact: Fact
+    let forecast: Forecast
 }
 
+struct Info: Decodable {
+    var lat: Int
+    var lon: Int
+}
+
+struct Fact: Decodable {
+    var temp: Int
+}
+
+struct Forecast: Decodable {
+    var date: String
+}
+
+/*
 extension DataWeather {
     static func getWeather() -> DataWeather {
-        DataWeather(data: "12.09.2023", degrees: "15", city: "Moscow")
+        DataWeather(date: "12.09.2023", temp: 15, lat: 1, lon: 1)
     }
 }
+*/

@@ -57,13 +57,13 @@ private extension ViewController {
     }
     
     func createdElement() {
-        dataLabel.text = dataWeather.data
+        dataLabel.text = ""
         dataLabel.textAlignment = .center
         
-        degreesLabel.text = dataWeather.degrees
+        degreesLabel.text = ""
         degreesLabel.textAlignment = .center
         
-        cityLabel.text = dataWeather.city
+        cityLabel.text = ""
         cityLabel.textAlignment = .center
         
         view.backgroundColor = .lightGray

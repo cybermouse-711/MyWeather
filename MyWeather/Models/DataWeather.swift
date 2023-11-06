@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DataWeather {
+struct DataWeather: Decodable {
     var data: String
     var degrees: String
     var city: String

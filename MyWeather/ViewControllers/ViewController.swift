@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let dataWeather = DataWeather.getWeather()
+    private let dataWeather = NetworkManager.shared
     
     private let dataLabel = UILabel()
     private let degreesLabel = UILabel()

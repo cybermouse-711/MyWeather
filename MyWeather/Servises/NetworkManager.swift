@@ -19,6 +19,7 @@ class NetworkManager {
         }
         let (data, _) = try await URLSession.shared.data(from: url)
         let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         guard let forecast = try? decoder.decode(DataWeather.self, from: data) else {
             throw NetworkError.decodingError
         }
@@ -31,5 +32,5 @@ enum NetworkError: Error {
 }
 
 enum API: String {
-    case weatherURL = ""
+    case weatherURL = "https://api.weather.yandex.ru/v2/informers?lat=55.7&lon=37.6"
 }

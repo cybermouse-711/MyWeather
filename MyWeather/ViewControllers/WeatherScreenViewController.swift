@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WeatherScreenViewController.swift
 //  MyWeather
 //
 //  Created by Елизавета Медведева on 20.08.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WeatherScreenViewController: UIViewController {
     
     private let dataWeather = NetworkManager.shared
     
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
 
 
-private extension ViewController {
+private extension WeatherScreenViewController {
     
     func addSubview() {
         view.addSubview(dataLabel)

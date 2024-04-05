@@ -1,5 +1,5 @@
 //
-//  WeatherScreenViewController.swift
+//  WeatherViewController.swift
 //  MyWeather
 //
 //  Created by Елизавета Медведева on 20.08.2023.
@@ -7,8 +7,13 @@
 
 import UIKit
 
+//MARK: - Protocols
+protocol IWeatherViewController: AnyObject {
+    func render(weather: DataWeather)
+}
+
 //MARK: - WeatherScreenViewController
-final class WeatherScreenViewController: UIViewController {
+final class WeatherViewController: UIViewController {
     
     //MARK: - Private properties
     private let networkManager = NetworkManager.shared
@@ -38,9 +43,8 @@ final class WeatherScreenViewController: UIViewController {
     }
 }
 
-
 //MARK: - Configure UI
-private extension WeatherScreenViewController {
+private extension WeatherViewController {
     func setupUI() {
         addSubViews()
         
@@ -55,7 +59,7 @@ private extension WeatherScreenViewController {
 }
 
 //MARK: - Setup UI
-private extension WeatherScreenViewController {
+private extension WeatherViewController {
     func setupSelfView() {
         view.backgroundColor = .systemCyan
     }
@@ -89,7 +93,7 @@ private extension WeatherScreenViewController {
 }
 
 //MARK: - Constraints
-private extension WeatherScreenViewController {
+private extension WeatherViewController {
     func setupConctraints() {
         [dataLabel, degreesLabel, cityLabel].forEach { subView in
             subView.translatesAutoresizingMaskIntoConstraints = false
@@ -111,5 +115,11 @@ private extension WeatherScreenViewController {
     }
 }
 
+//MARK: - Extensions for protocol
+extension WeatherViewController: IWeatherViewController {
+    func render(weather: DataWeather) {
+        self.weather = weather
+    }
+}
 
 

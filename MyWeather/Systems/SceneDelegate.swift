@@ -14,7 +14,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        let startVC = WeatherScreenViewController()
+        let startVC = WeatherViewController()
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = startVC

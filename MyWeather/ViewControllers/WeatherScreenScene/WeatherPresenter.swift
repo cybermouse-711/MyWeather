@@ -9,12 +9,17 @@ import UIKit
 
 //MARK: - Protocols
 protocol IWeatherPresenter {
-    func weather(weather: DataWeather)
+    func weather(model: DataWeather)
 }
 
 //MARK: - WeatherPresenter
 final class WeatherPresenter {
-   // private let router: String
+    
+   private let router: IWeatherRouter
+    
+    init(router: IWeatherRouter) {
+        self.router = router
+    }
 }
 
 //MARK: - Extensions for protocol

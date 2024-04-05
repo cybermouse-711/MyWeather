@@ -15,32 +15,42 @@ protocol IWeatherViewController: AnyObject {
 //MARK: - WeatherScreenViewController
 final class WeatherViewController: UIViewController {
     
-    //MARK: - Private properties
-    private let networkManager = NetworkManager.shared
+    //MARK: Private properties
+// private let networkManager = NetworkManager.shared
     private var weather: DataWeather!
     
-    var dataLabel = UILabel()
-    private var degreesLabel = UILabel()
-    private var cityLabel = UILabel()
+    private let dataLabel = UILabel()
+    private let degreesLabel = UILabel()
+    private let cityLabel = UILabel()
     
-    //MARK: - Override metods
+    //MARK: Properties
+    var presenter: IWeatherPresenter?
+    
+    //MARK: Override metods
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupPresenter()
     }
     
-    //MARK: - Private metods
-    private func getForecast() {
-        networkManager.fetchForecast { result in
-            switch result {
-            case .success(let weather):
-                self.weather = weather
-                self.dataLabel.text = weather.forecast.date
-            case .failure(let error):
-                print(error)
-            }
-        }
+    //MARK: Private metods
+//    private func getForecast() {
+//        networkManager.fetchForecast { result in
+//            switch result {
+//            case .success(let weather):
+//                self.weather = weather
+//                self.dataLabel.text = weather.forecast.date
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
+    
+    private func setupPresenter() {
+        let dataWeather = DataWeather(info: Info(lat: 0, lon: 0), fact: Fact(temp: 1), forecast: Forecast(date: "data"))
+        presenter?.weather(model: dataWeather)
     }
+
 }
 
 //MARK: - Configure UI

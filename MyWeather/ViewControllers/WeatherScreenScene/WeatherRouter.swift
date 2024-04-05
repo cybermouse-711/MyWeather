@@ -13,6 +13,11 @@ protocol IWeatherRouter: BaseRouting {}
 //MARK: - WeatherRouter
 final class WeatherRouter {
     
+    private let viewController: UIViewController
+    
+    init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
 }
 
 //MARK: - Extensions for protocol

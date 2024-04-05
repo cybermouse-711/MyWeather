@@ -11,13 +11,16 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        let startVC = WeatherViewController()
+        let weatherVC = WeatherViewController()
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = startVC
+        window?.rootViewController = weatherVC
+        
+        let weatherAssambly = WeatherAssembly(vc: weatherVC)
+        weatherAssambly.configure(viewController: weatherVC)
+        
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
         

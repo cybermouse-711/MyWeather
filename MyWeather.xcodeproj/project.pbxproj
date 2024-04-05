@@ -15,7 +15,6 @@
 		C62C007D2A92C1E800333B32 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C62C007C2A92C1E800333B32 /* .gitignore */; };
 		C65E9FCE2AF9507500E74BE6 /* DataWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E9FCD2AF9507500E74BE6 /* DataWeather.swift */; };
 		C65E9FD32AF952A300E74BE6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E9FD22AF952A300E74BE6 /* NetworkManager.swift */; };
-		C6C527012B8549C400385A08 /* WeatherScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C527002B8549C400385A08 /* WeatherScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		C62C007C2A92C1E800333B32 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C65E9FCD2AF9507500E74BE6 /* DataWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWeather.swift; sourceTree = "<group>"; };
 		C65E9FD22AF952A300E74BE6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		C6C527002B8549C400385A08 /* WeatherScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				C62C006A2A921E8900333B32 /* WeatherScreenViewController.swift */,
-				C6C527002B8549C400385A08 /* WeatherScreenView.swift */,
 			);
 			path = WeatherScreenScene;
 			sourceTree = "<group>";
@@ -200,7 +197,6 @@
 				C65E9FD32AF952A300E74BE6 /* NetworkManager.swift in Sources */,
 				C65E9FCE2AF9507500E74BE6 /* DataWeather.swift in Sources */,
 				C62C00692A921E8900333B32 /* SceneDelegate.swift in Sources */,
-				C6C527012B8549C400385A08 /* WeatherScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,3 @@ import UIKit
 protocol BaseAssembly {
     func configure(viewController: UIViewController)
 }
-
-protocol BaseRouting {
-    func routeTo(Target: Any)
-}

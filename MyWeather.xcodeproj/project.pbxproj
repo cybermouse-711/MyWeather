@@ -17,7 +17,7 @@
 		C65E9FD32AF952A300E74BE6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65E9FD22AF952A300E74BE6 /* NetworkManager.swift */; };
 		C673D1822BC044F3007452E0 /* WeatherAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C673D1812BC044F3007452E0 /* WeatherAssembly.swift */; };
 		C673D1842BC04510007452E0 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C673D1832BC04510007452E0 /* WeatherPresenter.swift */; };
-		C673D1862BC04525007452E0 /* WeatherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C673D1852BC04525007452E0 /* WeatherRouter.swift */; };
+		C673D1862BC04525007452E0 /* WeatherWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C673D1852BC04525007452E0 /* WeatherWorker.swift */; };
 		C673D1882BC0454C007452E0 /* MVXProtocole.swift in Sources */ = {isa = PBXBuildFile; fileRef = C673D1872BC0454C007452E0 /* MVXProtocole.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		C65E9FD22AF952A300E74BE6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C673D1812BC044F3007452E0 /* WeatherAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAssembly.swift; sourceTree = "<group>"; };
 		C673D1832BC04510007452E0 /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
-		C673D1852BC04525007452E0 /* WeatherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouter.swift; sourceTree = "<group>"; };
+		C673D1852BC04525007452E0 /* WeatherWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWorker.swift; sourceTree = "<group>"; };
 		C673D1872BC0454C007452E0 /* MVXProtocole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVXProtocole.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +128,7 @@
 				C673D1812BC044F3007452E0 /* WeatherAssembly.swift */,
 				C62C006A2A921E8900333B32 /* WeatherViewController.swift */,
 				C673D1832BC04510007452E0 /* WeatherPresenter.swift */,
-				C673D1852BC04525007452E0 /* WeatherRouter.swift */,
+				C673D1852BC04525007452E0 /* WeatherWorker.swift */,
 			);
 			path = WeatherScreenScene;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 				C65E9FD32AF952A300E74BE6 /* NetworkManager.swift in Sources */,
 				C65E9FCE2AF9507500E74BE6 /* DataWeather.swift in Sources */,
 				C62C00692A921E8900333B32 /* SceneDelegate.swift in Sources */,
-				C673D1862BC04525007452E0 /* WeatherRouter.swift in Sources */,
+				C673D1862BC04525007452E0 /* WeatherWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

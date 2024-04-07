@@ -21,8 +21,8 @@ final class WeatherAssembly {
 extension WeatherAssembly: BaseAssembly {
     func configure(viewController: UIViewController) {
         guard let weatherVC = viewController as? WeatherViewController else { return }
-        let router = WeatherRouter(viewController: vc)
-        let presenter = WeatherPresenter(router: router)
+        let worker = WeatherWorker(viewController: vc)
+        let presenter = WeatherPresenter(worker: worker)
         weatherVC.presenter = presenter
     }
 }

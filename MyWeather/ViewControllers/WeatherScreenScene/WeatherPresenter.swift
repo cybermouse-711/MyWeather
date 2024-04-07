@@ -15,10 +15,10 @@ protocol IWeatherPresenter {
 //MARK: - WeatherPresenter
 final class WeatherPresenter {
     
-   private let router: IWeatherRouter
+   private let worker: IWeatherWorker
     
-    init(router: IWeatherRouter) {
-        self.router = router
+    init(worker: IWeatherWorker) {
+        self.worker = worker
     }
 }
 

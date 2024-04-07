@@ -1,5 +1,5 @@
 //
-//  WeatherRouter.swift
+//  WeatherWorker.swift
 //  MyWeather
 //
 //  Created by Elizaveta Medvedeva on 05.04.24.
@@ -8,10 +8,12 @@
 import UIKit
 
 //MARK: - Protocols
-protocol IWeatherRouter: BaseRouting {}
+protocol IWeatherWorker {
+    func fetch()
+}
 
 //MARK: - WeatherRouter
-final class WeatherRouter {
+final class WeatherWorker {
     
     private let viewController: UIViewController
     
@@ -21,8 +23,9 @@ final class WeatherRouter {
 }
 
 //MARK: - Extensions for protocol
-extension WeatherRouter: IWeatherRouter {
-    func routeTo(Target: Any) {
-        
+extension WeatherWorker: IWeatherWorker {
+    func fetch() {
+        <#code#>
     }
 }
+

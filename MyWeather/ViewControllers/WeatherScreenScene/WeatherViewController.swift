@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 //MARK: - Protocols
 protocol IWeatherViewController: AnyObject {
@@ -105,22 +106,20 @@ private extension WeatherViewController {
 //MARK: - Constraints
 private extension WeatherViewController {
     func setupConctraints() {
-        [dataLabel, degreesLabel, cityLabel].forEach { subView in
-            subView.translatesAutoresizingMaskIntoConstraints = false
-            
-            NSLayoutConstraint.activate([
-                dataLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
-                dataLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-                dataLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-                
-                degreesLabel.topAnchor.constraint(equalTo: dataLabel.topAnchor, constant: 60),
-                degreesLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-                degreesLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-                
-                cityLabel.topAnchor.constraint(equalTo: degreesLabel.topAnchor, constant: 60),
-                cityLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-                cityLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
-            ])
+
+        dataLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.top.equalTo(view.snp.top).offset(150)
+        }
+        
+        degreesLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.top.equalTo(dataLabel.snp.bottom).offset(50)
+        }
+        
+        cityLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(view)
+            make.top.equalTo(degreesLabel.snp.bottom).offset(50)
         }
     }
 }

@@ -68,7 +68,6 @@
 				2979846A7B0AF1B3EEA02D5A /* Pods-MyWeather.debug.xcconfig */,
 				3E775A876D31995E8A0E35A5 /* Pods-MyWeather.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -176,6 +175,8 @@
 			dependencies = (
 			);
 			name = MyWeather;
+			packageProductDependencies = (
+			);
 			productName = MyWeather;
 			productReference = C62C00632A921E8900333B32 /* MyWeather.app */;
 			productType = "com.apple.product-type.application";
@@ -204,6 +205,8 @@
 				Base,
 			);
 			mainGroup = C62C005A2A921E8900333B32;
+			packageReferences = (
+			);
 			productRefGroup = C62C00642A921E8900333B32 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

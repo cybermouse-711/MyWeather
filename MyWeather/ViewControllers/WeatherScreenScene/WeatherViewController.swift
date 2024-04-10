@@ -17,7 +17,7 @@ protocol IWeatherViewController: AnyObject {
 final class WeatherViewController: UIViewController {
     
     //MARK: Private properties
-// private let networkManager = NetworkManager.shared
+private let networkManager = NetworkManager.shared
     private var weather: DataWeather!
     
     private let dataLabel = UILabel()
@@ -31,26 +31,30 @@ final class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setupPresenter()
+        getForecast()
+      //  setupPresenter()
     }
     
     //MARK: Private metods
-//    private func getForecast() {
-//        networkManager.fetchForecast { result in
-//            switch result {
-//            case .success(let weather):
-//                self.weather = weather
-//                self.dataLabel.text = weather.forecast.date
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-//    }
-    
-    private func setupPresenter() {
-        let dataWeather = DataWeather(info: Info(lat: 0, lon: 0), fact: Fact(temp: 1), forecast: Forecast(date: "data"))
-        presenter?.weather(model: dataWeather)
+    private func getForecast() {
+        networkManager.fetchForecast { result in
+            switch result {
+            case .success(let weather):
+                self.weather = weather
+                self.dataLabel.text = weather.flightNumber.formatted()
+                self.cityLabel.text = weather.dateLocal
+                self.degreesLabel.text = weather.name
+                print(weather)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
+    
+//    private func setupPresenter() {
+//        let dataWeather = DataWeather
+//        presenter?.weather(model: dataWeather)
+//    }
 
 }
 

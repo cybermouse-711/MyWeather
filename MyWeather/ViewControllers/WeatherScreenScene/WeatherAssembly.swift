@@ -20,10 +20,10 @@ final class WeatherAssembly {
 //MARK: - Extensions for protocol
 extension WeatherAssembly: BaseAssembly {
     func configure(viewController: UIViewController) {
-        guard let weatherVC = viewController as? WeatherViewController else { return }
-        let worker = WeatherWorker(viewController: vc)
-        let presenter = WeatherPresenter(worker: worker)
-        weatherVC.presenter = presenter
+        guard let vc = viewController as? WeatherViewController else { return }
+        let worker = WeatherWorker()
+        let presenter = WeatherPresenter(vc: vc, worker: worker)
+        vc.presenter = presenter
     }
 }
 

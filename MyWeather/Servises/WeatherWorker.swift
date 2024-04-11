@@ -20,12 +20,7 @@ protocol IWeatherWorker {
 
 //MARK: - WeatherRouter
 final class WeatherWorker {
-    
-    private let viewController: UIViewController
-    
-    init(viewController: UIViewController) {
-        self.viewController = viewController
-    }
+
 }
 
 //MARK: - Extensions for protocol

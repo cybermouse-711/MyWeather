@@ -9,22 +9,32 @@ import UIKit
 
 //MARK: - Protocols
 protocol IWeatherPresenter {
-    func weather(model: DataWeather)
+    func fetchData()
 }
 
 //MARK: - WeatherPresenter
 final class WeatherPresenter {
     
-   private let worker: IWeatherWorker
+    weak var vc: IWeatherViewController?
+    private let worker: IWeatherWorker
     
-    init(worker: IWeatherWorker) {
+    init(vc: IWeatherViewController,worker: IWeatherWorker) {
+        self.vc = vc
         self.worker = worker
     }
 }
 
 //MARK: - Extensions for protocol
 extension WeatherPresenter: IWeatherPresenter {
-    func weather(model: DataWeather) {
-        
+    func fetchData() {
+        worker.fetchForecast { result in
+            switch result {
+            case .success(let weather):
+                self.vc?.render(weather: weather)
+                print(weather)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
